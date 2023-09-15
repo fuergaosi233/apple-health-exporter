@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "apple-health"
+version = "0.1.0"
+description = ""
+authors = ["Holegots <fuergaosi@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = {extras = ["all"], version = "^0.103.1"}
+influxdb = "^5.3.1"
+influxdb-client = {extras = ["async"], version = "^1.37.0"}
+influxdb3-python = "^0.2.1"
+sqlalchemy-timescaledb = "^0.4.1"
+sqlalchemy = "2.0.20"
+psycopg2-binary = "^2.9.7"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
