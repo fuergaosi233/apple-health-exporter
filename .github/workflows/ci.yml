@@ -69,5 +69,5 @@ jobs:
           context: .
           push: true
           file: ./Dockerfile.grafana
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: latest
           labels: ${{ steps.meta.outputs.labels }}
