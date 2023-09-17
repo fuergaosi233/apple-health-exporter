@@ -35,7 +35,7 @@ docker compose up -d
 
 ## Start Sync data
 
-1. Download `Auto Exporter` from App Store
+1. Download [Health Auto Export - JSON+CSV](https://apps.apple.com/us/app/health-auto-export-json-csv/id1115567069) from App Store
 2. Config Automations like this 
 ![Config](./docs/config.png)
 > You might have to pay for it. There's a not free app. You can use `Shortcuts` to do this. But I don't know how to do it. If you know, please tell me.  
