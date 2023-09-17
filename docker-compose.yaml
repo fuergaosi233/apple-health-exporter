@@ -1,5 +1,13 @@
 version: "3.8"
 services:
+  server:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file:
+      - .env
   db:
     image: timescale/timescaledb-postgis:latest-pg13
     volumes:
@@ -10,3 +18,18 @@ services:
       - POSTGRES_DB=postgres
     ports:
       - "5432:5432"
+  grafana:
+    image: grafana/grafana-enterprise:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+    volumes:
+      - ./grafana:/data
+    env_file:
+      - .env
+    environment:
+      - GF_DEFAULT_INSTANCE_NAME=health-export
+      - GF_LOG_MODE=console
+      - GF_PATHS_DATA=/data
+      - PORT=3000
