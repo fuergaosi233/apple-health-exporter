@@ -26,13 +26,12 @@ docker compose up -d
 
 ## Config Grafana
 
-> If you use docker-compose, you need to setup your own grafana, and import `dashboard.json` to your dashboard
 
 1. Config Postgresql DB (Timescale)
 ![DB](./docs/postgresql.jpeg)
-2. Import `dashboard.json` to your dashboard
+1. Import `dashboard.json` to your dashboard
 ![DB](./docs/import.png)
-3. Enjoy it
+1. Enjoy it
 
 ## Start Sync data
 
