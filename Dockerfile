@@ -1,7 +1,7 @@
 FROM python:3.11
 WORKDIR /app
 COPY poetry.lock pyproject.toml /app/
-RUN pip install poetry &&\
+RUN pip install "poetry<2" &&\
   poetry config virtualenvs.create false &&\
   poetry install --no-dev
 COPY . /app
